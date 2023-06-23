@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:liveasy/pages/mobile_number_page.dart';
 
+// void main() {
+//   runApp(const MyApp());
+// }
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const MaterialApp(
+      home: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
+  // implement hindi language support
+  // implement textfield on submit
+
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
@@ -17,7 +28,7 @@ class MyApp extends StatelessWidget {
             // crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Expanded(
-                flex:5,
+                flex: 5,
                 child: Column(
                   //  mainAxisAlignment: MainAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +54,12 @@ class MyApp extends StatelessWidget {
                     SelectLanguage(),
                     SizedBox(height: 24),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>  EnterNumber()));
+                      },
                       child: const Text(
                         "NEXT",
                         style: TextStyle(
@@ -64,7 +80,6 @@ class MyApp extends StatelessWidget {
               Expanded(
                 child: Container(
                   child: Stack(
-
                     // fit: StackFit.passthrough,
                     children: [
                       Align(
@@ -556,7 +571,7 @@ class BackClipper extends CustomClipper<Path> {
   //   );
   //   return path;
   // }
-   @override
+  @override
   Path getClip(Size size) {
     Path path = Path();
     final double _xScaling = size.width / 430;
