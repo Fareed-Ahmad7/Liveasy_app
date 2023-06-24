@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:liveasy/pages/verify_otp.dart';
 
 class EnterNumber extends StatelessWidget {
   const EnterNumber({super.key});
@@ -110,7 +111,10 @@ class EnterNumber extends StatelessWidget {
                 height: 24,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => VerifyOTP()));
+                },
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(328, 56),
                   shape: const LinearBorder(),

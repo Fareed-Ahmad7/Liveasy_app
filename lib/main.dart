@@ -15,6 +15,17 @@ void main() {
 class MyApp extends StatelessWidget {
   // implement hindi language support
   // implement textfield on submit
+  // remove validate button
+  // add resend code button
+  // change pinput ui to figma design
+  //   rename pages and replace it with word screens
+  // decide and add clippath design to mobile page
+  // format, clean, break into widgets, break main and home page code
+  // don't let the user to go to profile page if his otp is not validated.
+  // don't let the user to go back screen if his otp is validated.
+  // make leading listtile icon align at center, place images of wearhouse and lorry before titles.
+  // increase the quality of images of lorry and wearhouse 
+
 
   const MyApp({super.key});
   @override
