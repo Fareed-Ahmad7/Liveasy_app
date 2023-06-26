@@ -8,17 +8,10 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  int selectedIndex = 0;
+  bool _isRadioSelected = false;
 
   @override
   Widget build(BuildContext context) {
-    List profileType = ['Shipper', 'Transpoter'];
-    List profileDescription = ['Lorem ipsum dolor ', 'Lorem ipsum sit '];
-    List profileIcon = [
-      'assets/images/shipper.png',
-      'assets/images/transpoter.png'
-    ];
-
     return Scaffold(
       body: Column(
         children: [
@@ -34,66 +27,38 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       fontSize: 20,
                     ),
                   ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: ListView.builder(
-                          physics: const NeverScrollableScrollPhysics(),
-                          padding: const EdgeInsets.fromLTRB(16, 24, 16, 0),
-                          shrinkWrap: true,
-                          scrollDirection: Axis.vertical,
-                          itemCount: profileType.length,
-                          itemBuilder: (context, index) => Padding(
-                            padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
-                            child: Container(
-                              width: 328,
-                              height: 89,
-                              decoration: BoxDecoration(
-                                border: index == selectedIndex
-                                    ? Border.all(color: Colors.grey, width: 1.5)
-                                    : Border.all(
-                                        color: Colors.grey.withOpacity(0.5)),
-                              ),
-                              child: ListTile(
-                                  tileColor: index == selectedIndex
-                                      ? const Color.fromARGB(51, 197, 199, 199)
-                                      : null,
-                                  textColor: Colors.black,
-                                  leading: index == selectedIndex
-                                      ? const Icon(
-                                          Icons.radio_button_checked,
-                                          color: Colors.black,
-                                        )
-                                      : Icon(
-                                          Icons.radio_button_unchecked,
-                                          color: Colors.black.withOpacity(0.5),
-                                        ),
-                                  title: Text(
-                                    profileType[index],
-                                    style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      letterSpacing: .3,
-                                    ),
-                                  ),
-                                  subtitle: Text(
-                                    profileDescription[index],
-                                    style: const TextStyle(
-                                      letterSpacing: .3,
-                                    ),
-                                  ),
-                                  trailing: Image.asset(
-                                    profileIcon[index],
-                                  ),
-                                  onTap: () {
-                                    setState(() {
-                                      selectedIndex = index;
-                                    });
-                                  }),
-                            ),
-                          ),
-                        ),
+                  Column(
+                    children: <LabeledRadio>[
+                      LabeledRadio(
+                        label: 'Shipper',
+                        desc:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing',
+                        icon: 'assets/images/shipper.png',
+                        value: true,
+                        groupValue: _isRadioSelected,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            _isRadioSelected = newValue;
+                          });
+                        },
+                      ),
+                      LabeledRadio(
+                        label: 'Transporter',
+                        desc:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing',
+                        icon: 'assets/images/transpoter.png',
+                        value: false,
+                        groupValue: _isRadioSelected,
+                        onChanged: (bool newValue) {
+                          setState(() {
+                            _isRadioSelected = newValue;
+                          });
+                        },
                       ),
                     ],
+                  ),
+                  const SizedBox(
+                    height: 24,
                   ),
                   ElevatedButton(
                     onPressed: () {},
@@ -116,6 +81,77 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class LabeledRadio extends StatelessWidget {
+  const LabeledRadio({
+    super.key,
+    required this.label,
+    required this.groupValue,
+    required this.value,
+    required this.onChanged,
+    required this.icon,
+    required this.desc,
+  });
+
+  final String label;
+  final bool groupValue;
+  final bool value;
+  final ValueChanged<bool> onChanged;
+  final String icon;
+  final String desc;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0, 24, 0, 0),
+      child: InkWell(
+        onTap: () {
+          if (value != groupValue) {
+            onChanged(value);
+          }
+        },
+        child: Container(
+          width: 328,
+          height: 89,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.black),
+          ),
+          child: Row(
+            children: <Widget>[
+              Radio<bool>(
+                activeColor: const Color.fromRGBO(46, 59, 98, 1),
+                groupValue: groupValue,
+                value: value,
+                onChanged: (bool? newValue) {
+                  onChanged(newValue!);
+                },
+              ),
+              Image.asset(icon),
+              const SizedBox(
+                width: 16,
+              ),
+              SizedBox(
+                width: 200,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      label,
+                      style: const TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.w500),
+                    ),
+                    Text(desc),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

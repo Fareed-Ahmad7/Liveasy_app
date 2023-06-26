@@ -11,6 +11,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Column(
           children: [
@@ -76,7 +77,7 @@ class HomeScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: ClipPath(
-                      clipper: BackClipper(),
+                      clipper: HomeBackClipper(),
                       child: Container(
                         height: 113,
                         color: const Color.fromRGBO(147, 210, 243, 1),
@@ -86,7 +87,7 @@ class HomeScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: ClipPath(
-                      clipper: FrontClipper(),
+                      clipper: HomeFrontClipper(),
                       child: Container(
                         height: 113,
                         color: const Color.fromRGBO(46, 59, 98, .5),

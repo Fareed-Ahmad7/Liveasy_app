@@ -44,6 +44,7 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
     );
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Column(
           children: [
@@ -80,12 +81,25 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
                             AndroidSmsAutofillMethod.smsUserConsentApi,
                         listenForMultipleSmsOnAndroid: true,
                       )),
-                  const SizedBox(height: 16),
-                  const Text(
-                    "Didn’t receive the code? TODO:Resend Code",
-                    style: TextStyle(fontSize: 14),
+                  // const SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "Didn’t receive the code?",
+                        style: TextStyle(fontSize: 14),
+                      ),
+                      TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: const Text(
+                            "Request Again",
+                            style: TextStyle(color: Colors.black),
+                          ))
+                    ],
                   ),
-                  const SizedBox(height: 24),
+                  // const SizedBox(height: 24),
                   ElevatedButton(
                     onPressed: () async {
                       debugPrint("signin with credentials");
@@ -101,22 +115,16 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
                               smsCode: pinController.text);
 
                       // Sign the user in (or link) with the credential
-                      await auth.signInWithCredential(credential).catchError(
-                        (e) {
-                          debugPrint(e);
-                          throw Exception('Invalid SMS CODE !!!');
-
+                      await auth.signInWithCredential(credential).then(
+                        (UserCredential result) {
+                          debugPrint("credentials: $credential");
+                          debugPrint("credential result: $result");
+                          Navigator.of(context).pushAndRemoveUntil(
+                              MaterialPageRoute(
+                                  builder: (context) => const ProfileScreen()),
+                              (Route<dynamic> route) => false);
                         },
-                      ).then((UserCredential result) {
-                        debugPrint("credentials: $credential");
-                        debugPrint("credential result: $result");
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ProfileScreen(),
-                          ),
-                        );
-                      });
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size(328, 56),
@@ -141,4 +149,3 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
     );
   }
 }
-
