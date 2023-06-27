@@ -1,0 +1,18 @@
+{
+  "homeTitle": "Please select your Language",
+  "homeSubTitle": "You can change the language at any time.",
+  "homeButton": "Next",
+  "loginTitle":"Please enter your mobile number",
+  "loginSubTitle":"You will receive a 6 digit code to verify next.",
+  "loginButton":"CONTINUE",
+  "otpTitle":"Verify Phone",
+  "otpSubTitle":"Code is sent to ",
+  "otpQuestion":"Didn’t receive the code?",
+  "otpResend":"Request Again",
+  "otpButton":"VERIFY AND CONTINUE",
+  "profileTitle":"Please select your profile",
+  "profileShipper":"Shipper",
+  "profileTranspoter":"Transporter",
+  "profileDesc":"Lorem ipsum dolor sit amet, consectetur adipiscing",
+  "profileButton":"CONTINUE"
+}

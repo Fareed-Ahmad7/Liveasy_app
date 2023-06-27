@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -20,9 +21,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             child: Center(
               child: Column(
                 children: [
-                  const Text(
-                    "Please select your profile",
-                    style: TextStyle(
+                   Text(
+                    AppLocalizations.of(context)!.profileTitle,
+                    style:const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
@@ -30,9 +31,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Column(
                     children: <LabeledRadio>[
                       LabeledRadio(
-                        label: 'Shipper',
+                        label: AppLocalizations.of(context)!.profileShipper,
                         desc:
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing',
+                        AppLocalizations.of(context)!.profileDesc,
                         icon: 'assets/images/shipper.png',
                         value: true,
                         groupValue: _isRadioSelected,
@@ -43,9 +44,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         },
                       ),
                       LabeledRadio(
-                        label: 'Transporter',
+                        label: AppLocalizations.of(context)!.profileTranspoter,
                         desc:
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing',
+                        AppLocalizations.of(context)!.profileDesc,
                         icon: 'assets/images/transpoter.png',
                         value: false,
                         groupValue: _isRadioSelected,
@@ -67,9 +68,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       shape: const LinearBorder(),
                       backgroundColor: const Color.fromRGBO(46, 59, 98, 1),
                     ),
-                    child: const Text(
-                      "CONTINUE",
-                      style: TextStyle(
+                    child: Text(
+                      AppLocalizations.of(context)!.profileButton,
+                      style:const TextStyle(
                         fontSize: 16,
                         letterSpacing: 1,
                         fontWeight: FontWeight.bold,

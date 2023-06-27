@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:liveasy/utils/waves.dart';
 import 'package:liveasy/widgets/dropdown.dart';
 import 'login.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -24,18 +25,17 @@ class HomeScreen extends StatelessWidget {
                     'assets/images/image.png',
                   ),
                   const SizedBox(height: 32),
-                  const Text(
-                    "Please select your Language",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
+                  Text(AppLocalizations.of(context)!.homeTitle,
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 8),
-                  const Text(
-                    "You can change the language at any time.",
-                    style: TextStyle(fontSize: 14),
+                   Text(
+                    AppLocalizations.of(context)!.homeSubTitle,
+                    style: const TextStyle(fontSize: 14),
                   ),
                   const SizedBox(height: 24),
 
@@ -57,9 +57,9 @@ class HomeScreen extends StatelessWidget {
                       shape: const LinearBorder(),
                       backgroundColor: const Color.fromRGBO(46, 59, 98, 1),
                     ),
-                    child: const Text(
-                      "NEXT",
-                      style: TextStyle(
+                    child:  Text(
+                      AppLocalizations.of(context)!.homeButton,
+                      style: const TextStyle(
                         fontSize: 16,
                         letterSpacing: 1,
                         fontWeight: FontWeight.bold,

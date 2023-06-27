@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:liveasy/screens/otp.dart';
 import 'package:liveasy/utils/waves.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 FirebaseAuth auth = FirebaseAuth.instance;
 
@@ -37,21 +38,21 @@ class _LoginScreenState extends State<LoginScreen> {
                       CloseButton(),
                     ],
                   ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(0, 64, 0, 0),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 64, 0, 0),
                     child: Column(
                       children: [
                         Text(
-                          "Please enter your mobile number",
-                          style: TextStyle(
+                          AppLocalizations.of(context)!.loginTitle,
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
                           ),
                         ),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         Text(
-                          "You will receive a 6 digit code to verify next.",
-                          style: TextStyle(fontSize: 14),
+                          AppLocalizations.of(context)!.loginSubTitle,
+                          style: const TextStyle(fontSize: 14),
                         ),
                       ],
                     ),
@@ -132,14 +133,13 @@ class _LoginScreenState extends State<LoginScreen> {
                               debugPrint(e.message);
                               if (e.code == 'invalid-phone-number') {
                                 debugPrint(
-                                    'The provided phone number is not valid.');                        
+                                    'The provided phone number is not valid.');
                               }
                               showDialog<String>(
                                 context: context,
                                 builder: (BuildContext context) => AlertDialog(
-                                  title: const Text('Invalid Number'),
-                                  content: const Text(
-                                      ' Please enter a valid number'),
+                                  title: const Text("Invalid Number"),
+                                  content: const Text("Please enter a valid number"),
                                   actions: <Widget>[
                                     TextButton(
                                       onPressed: () =>
@@ -176,9 +176,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           shape: const LinearBorder(),
                           backgroundColor: const Color.fromRGBO(46, 59, 98, 1),
                         ),
-                        child: const Text(
-                          "CONTINUE",
-                          style: TextStyle(
+                        child: Text(
+                          AppLocalizations.of(context)!.loginButton,
+                          style: const TextStyle(
                             fontSize: 16,
                             letterSpacing: 1,
                             fontWeight: FontWeight.bold,

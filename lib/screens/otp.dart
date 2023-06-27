@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:liveasy/screens/login.dart';
 import 'package:liveasy/screens/profile.dart';
 import 'package:pinput/pinput.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class VerifyOTPScreen extends StatefulWidget {
   const VerifyOTPScreen(
@@ -57,16 +58,16 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
               padding: const EdgeInsets.fromLTRB(0, 64, 0, 0),
               child: Column(
                 children: [
-                  const Text(
-                    "Verify Phone",
-                    style: TextStyle(
+                   Text(
+                    AppLocalizations.of(context)!.otpTitle,
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    "Code is sent to ${widget.userMobileNumber}",
+                    AppLocalizations.of(context)!.otpSubTitle +"${widget.userMobileNumber}",
                     style: const TextStyle(fontSize: 14),
                   ),
                   const SizedBox(height: 24),
@@ -85,17 +86,17 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
-                        "Didn’t receive the code?",
-                        style: TextStyle(fontSize: 14),
+                       Text(
+                        AppLocalizations.of(context)!.otpQuestion,
+                        style:const TextStyle(fontSize: 14),
                       ),
                       TextButton(
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          child: const Text(
-                            "Request Again",
-                            style: TextStyle(color: Colors.black),
+                          child:  Text(
+                            AppLocalizations.of(context)!.otpResend,
+                            style: const TextStyle(color: Colors.black),
                           ))
                     ],
                   ),
@@ -131,9 +132,9 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
                       shape: const LinearBorder(),
                       backgroundColor: const Color.fromRGBO(46, 59, 98, 1),
                     ),
-                    child: const Text(
-                      "VERIFY AND CONTINUE",
-                      style: TextStyle(
+                    child:  Text(
+                      AppLocalizations.of(context)!.otpButton,
+                      style:const TextStyle(
                         fontSize: 16,
                         letterSpacing: 1,
                         fontWeight: FontWeight.bold,

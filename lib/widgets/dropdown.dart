@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SelectLanguage extends StatefulWidget {
   const SelectLanguage({
@@ -9,7 +10,7 @@ class SelectLanguage extends StatefulWidget {
   State<SelectLanguage> createState() => _SelectLanguageState();
 }
 
-const List<String> list = <String>['English', 'Hindi'];
+const List<String> list = <String>['English', 'हिन्दी'];
 
 class _SelectLanguageState extends State<SelectLanguage> {
   String dropdownValue = list.first;
@@ -24,6 +25,9 @@ class _SelectLanguageState extends State<SelectLanguage> {
         child: DropdownButton<String>(
           value: dropdownValue,
           onChanged: (String? value) {
+            value == "हिन्दी"
+                ? Get.updateLocale(const Locale('hi'))
+                : Get.updateLocale(const Locale('en'));
             // This is called when the user selects an item.
             setState(() {
               dropdownValue = value!;

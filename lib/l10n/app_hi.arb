@@ -1,0 +1,18 @@
+{
+    "homeTitle": "कृपया अपनी भाषा चुनें",
+    "homeSubTitle": "आप किसी भी समय भाषा बदल सकते हैं.",
+    "homeButton":"अगला",
+    "loginTitle":"अपना मोबाइल नंबर दर्ज करें",
+    "loginSubTitle":"आगे सत्यापित करने के लिए आपको 6 अंकों का कोड प्राप्त होगा।",
+    "loginButton":"जारी रखें",
+    "otpTitle":"फ़ोन सत्यापित करें",
+    "otpSubTitle":"कोड भेजा गया है ",
+    "otpQuestion":"कोड प्राप्त नहीं हुआ?",
+    "otpResend":"पुनः अनुरोध करें",
+    "otpButton":"जारी रखें",
+    "profileTitle":"कृपया अपना प्रोफ़ाइल चुनें",
+    "profileShipper":"भेजनेवाला",
+    "profileTranspoter":"ट्रांसपोर्टर",
+    "profileDesc":"लोरेम इप्सम डोलर सिट अमेट, कंसेक्टेचर एडिपिसिंग",
+    "profileButton":"जारी रखें"
+}
