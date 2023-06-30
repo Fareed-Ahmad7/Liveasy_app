@@ -8,43 +8,33 @@
 
 # IOS Screenshots
 
-<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/9da94ff9-a1f9-43e2-a864-7861f0e0967d" width=30% height=30%>
+<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/6aabd276-e81b-47c5-8b6d-4925be7778c4" width=30% height=30%>
 &nbsp; &nbsp;  &nbsp; 
-
-<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/a060c7e1-05d8-45e8-bc1c-2a0c225f230a" width=30% height=30%>
+<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/84fb1ce1-0961-48ee-9944-0b6f5826a6c7" width=30% height=30%>
 &nbsp; &nbsp;  &nbsp; 
-
-<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/4fed8d12-7328-4347-8862-f3596f0e013b" width=30% height=30%>
+<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/88532716-fc69-470e-b9fe-1732cd811fa3" width=30% height=30%>
 &nbsp; &nbsp;  &nbsp; 
-
-<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/502ff599-2e90-406d-9cb3-4cdebb18708b" width=30% height=30%>
+<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/d7dee3ab-406b-4af1-bb4c-a69eb155d344" width=30% height=30%>
 &nbsp; &nbsp;  &nbsp; 
-
-<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/8a066eb1-39e9-476e-b4d9-bff2ddad8be7" width=30% height=30%>
+<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/e18a7be5-31d9-485b-8538-0f53a5dbd2cf" width=30% height=30%>
 &nbsp; &nbsp;  &nbsp; 
-
-<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/377a96d9-126c-45b0-8081-812efb511277" width=30% height=30%>
+<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/9be55821-0a0e-404f-af4b-686739b0c965" width=30% height=30%>
 &nbsp; &nbsp;  &nbsp; 
-
-<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/2866cc58-bcca-4fde-ac66-6aafd627ef22" width=30% height=30%>
+<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/b478a80c-2eb4-4933-a084-18ab786c8c12" width=30% height=30%>
 &nbsp; &nbsp;  &nbsp; 
-
-<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/4d5a01b4-1347-4e41-83dd-3703105b9c12" width=30% height=30%>
+<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/9b9f5a84-8ce5-4f7f-8718-9a4dee1a730d" width=30% height=30%>
 &nbsp; &nbsp;  &nbsp; 
-
-<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/77e34fdf-90a5-4f5c-8a8a-a9acc9472430" width=30% height=30%>
+<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/0652bb9e-be6f-42db-a4e8-8d0af286681b" width=30% height=30%>
 &nbsp; &nbsp;  &nbsp; 
 
 
 # Hindi Language Support
 
-<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/fc89b52d-546f-4c41-ad81-aab2b0a62444" width=30% height=30%>
+<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/7f104340-d053-4463-8542-824364eb5ddd" width=30% height=30%>
 &nbsp; &nbsp;  &nbsp; 
-<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/0a623d32-2f14-4ebd-be24-bda1a4ec2e5d" width=30% height=30%>
+<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/ee11b2e0-ac72-432b-9a7f-17d7823841f8" width=30% height=30%>
 &nbsp; &nbsp;  &nbsp; 
-<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/c5bdf0c2-6fe9-4c97-a5c3-f396bc767a41" width=30% height=30%>
+<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/6a640fa5-b7c9-4e5b-8aff-6d931c6d1f46" width=30% height=30%>
 &nbsp; &nbsp;  &nbsp; 
-<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/dcee8377-e563-4421-8b11-7487d9d02bc4" width=30% height=30%>
+<img src="https://github.com/Fareed-Ahmad7/Liveasy_app/assets/90202062/4c7e666e-1f06-49f1-b28b-6574b8cdb244" width=30% height=30%>
 &nbsp; &nbsp;  &nbsp; 
-
-
